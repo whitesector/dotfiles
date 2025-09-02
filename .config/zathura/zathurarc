@@ -1,0 +1,6 @@
+set selection-clipboard clipboard
+set default-bg "#141423"
+set default-fg "#ffffff"  # Sets font color to white
+set statusbar-bg "#141423"
+set statusbar-fg "#ffffff"
+
