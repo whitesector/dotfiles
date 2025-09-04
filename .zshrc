@@ -6,6 +6,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
+
+# custom colors
+
+
 ################ 
 my-backward-delete-word () {
     local WORDCHARS='~!#$%^&*(){}[]<>?+;'
@@ -64,7 +68,7 @@ alias gpt='tgpt'
 alias z='zathura'
 alias tree='eza --tree --icons --sort=newest --color=always'
 alias u='sudo pacman -Syyu'
-alias yu='yay -Syyu'
+alias yu='paru -Syu'
 alias lta='eza --tree --icons --sort=newest'
 alias ls=' eza -l --icons --color=always --group-directories-first'
 alias l='eza -al --color=always --group-directories-first'
@@ -80,7 +84,8 @@ alias ip='ip --color=auto'
 alias grep='grep -i --color=auto'
 alias cat='bat'
 alias xbacklight='sudo xbacklight'
-alias rsync='rsync -rPavh'
+alias rsyncex='rsync -avh --no-perms --no-owner --no-group --no-times --progress --partial --inplace --append-verify '
+alias rsync='rsync -avh --progress --partial --inplace --append-verify '
 alias yt='yt-dlp  -f "bestvideo[height<=1080]+bestaudio/best[height<=1080]" --audio-quality 0'
 alias v='nvim'
 alias timer='tclock timer -d 20m -M'
